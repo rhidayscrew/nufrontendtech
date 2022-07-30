@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage":"http://api.umaclean.my.id/",
+  "homepage":"https://whimsical-selkie-d52dc2.netlify.app/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
