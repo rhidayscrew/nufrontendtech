@@ -8,7 +8,7 @@ import Register from "./components/Register";
 
 function App() {
   return (
-    <BrowserRouter basename="/reactbuildtest">
+    <BrowserRouter basename="/">
       <Routes>
          <Route path="/" element={<Login/>}/>
          <Route path="register" element={<Register/>}/>
