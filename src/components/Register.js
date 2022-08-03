@@ -19,7 +19,7 @@ const Register = () => {
                 password: password,
                 confPassword: confPassword
             });
-            navigate("/");
+            navigate("/register");
         } catch (error) {
             if (error.response) {
                 setMsg(error.response.data.msg);
