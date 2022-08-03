@@ -18,7 +18,7 @@ const Dashboard = () => {
 
     const refreshToken = async () => {
         try {
-            const response = await axios.get('http://updatenutechnodemysql.herokuapp.com/token');
+            const response = await axios.get('https://updatenutechnodemysql.herokuapp.com/token');
             setToken(response.data.accessToken);
             const decoded = jwt_decode(response.data.accessToken);
             setName(decoded.name);
@@ -35,7 +35,7 @@ const Dashboard = () => {
     axiosJWT.interceptors.request.use(async (config) => {
         const currentDate = new Date();
         if (expire * 1000 < currentDate.getTime()) {
-            const response = await axios.get('http://updatenutechnodemysql.herokuapp.com/token');
+            const response = await axios.get('https://updatenutechnodemysql.herokuapp.com/token');
             config.headers.Authorization = `Bearer ${response.data.accessToken}`;
             setToken(response.data.accessToken);
             const decoded = jwt_decode(response.data.accessToken);
@@ -48,7 +48,7 @@ const Dashboard = () => {
     });
 
     const getUsers = async () => {
-        const response = await axiosJWT.get('http://updatenutechnodemysql.herokuapp.com/users', {
+        const response = await axiosJWT.get('https://updatenutechnodemysql.herokuapp.com/users', {
             headers: {
                 Authorization: `Bearer ${token}`
             }
