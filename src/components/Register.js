@@ -13,7 +13,7 @@ const Register = () => {
     const Register = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://updatenutechnodemysql.herokuapp.com/users',{ credentials: 'include' }, {
+            await axios.post('http://updatenutechnodemysql.herokuapp.com/users', {
                 name: name,
                 email: email,
                 password: password,

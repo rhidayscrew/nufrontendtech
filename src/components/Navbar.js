@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const Logout = async () => {
         try {
-            await axios.delete('http://updatenutechnodemysql.herokuapp.com/logout',{ credentials: 'include' });
+            await axios.delete('http://updatenutechnodemysql.herokuapp.com/logout');
             navigate("/");
         } catch (error) {
             console.log(error);

@@ -48,7 +48,7 @@ const Dashboard = () => {
     });
 
     const getUsers = async () => {
-        const response = await axiosJWT.get('http://updatenutechnodemysql.herokuapp.com/users',{ credentials: 'include' }, {
+        const response = await axiosJWT.get('http://updatenutechnodemysql.herokuapp.com/users', {
             headers: {
                 Authorization: `Bearer ${token}`
             }

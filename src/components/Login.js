@@ -11,7 +11,7 @@ const Login = () => {
     const Auth = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://updatenutechnodemysql.herokuapp.com/login',{ credentials: 'include' }, {
+            await axios.post('http://updatenutechnodemysql.herokuapp.com/login', {
                 email: email,
                 password: password
             });
